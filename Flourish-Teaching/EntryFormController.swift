@@ -19,6 +19,10 @@ class EntryFormController: UIViewController {
         ["title": "not so great", "color" : "#c6802e"],
         ["title": "the worst", "color" : "#b05050"]
     ]
+    
+    @IBAction func togglePicker(sender: AnyObject) {
+        picker.hidden ? openPicker() : closePicker()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +58,20 @@ class EntryFormController: UIViewController {
             },
             completion: {finished in
                 
+            }
+        )
+    }
+    
+    func closePicker() {
+        UIView.animateWithDuration(0.3,
+            animations: {
+                self.picker.frame = CGRect(x: 45, y: 160, width: 286, height: 291)
+                self.picker.alpha = 0
+            },
+            completion: { finished in
+                if (finished) {
+                    self.picker.hidden = true
+                }
             }
         )
     }

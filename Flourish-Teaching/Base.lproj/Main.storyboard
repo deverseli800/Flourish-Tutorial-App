@@ -104,6 +104,9 @@
                                 <state key="normal" title="Select">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="togglePicker:" destination="hgH-Ad-uvr" eventType="touchUpInside" id="9fH-1q-6iP"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mq4-2N-Q44">
                                 <rect key="frame" x="16" y="189" width="568" height="272"/>
