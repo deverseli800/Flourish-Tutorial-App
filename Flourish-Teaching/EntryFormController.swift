@@ -99,6 +99,27 @@ class EntryFormController: UIViewController, CLLocationManagerDelegate {
         locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters
         locationManager.startUpdatingLocation()
     }
+    
+    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        switch status {
+        case .NotDetermined :
+            manager.requestWhenInUseAuthorization()
+            println("prompt th euser to enable location services")
+            
+        case .Denied:
+            println("prompt the user to re-enable location services in settings")
+        
+        case .AuthorizedWhenInUse :
+            println("authorized when in used")
+            
+        default:
+            println("other status")
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        currentLocation = (locations.last as! CLLocation)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
