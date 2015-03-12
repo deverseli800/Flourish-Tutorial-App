@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreLocation
 
-class EntryFormController: UIViewController {
+class EntryFormController: UIViewController, CLLocationManagerDelegate {
     
     let picker = UIImageView(image:UIImage(named: "picker"))
     let feelings = [
@@ -19,6 +20,8 @@ class EntryFormController: UIViewController {
         ["title": "not so great", "color" : "#c6802e"],
         ["title": "the worst", "color" : "#b05050"]
     ]
+    var locationManager : CLLocationManager!
+    var currentLocation : CLLocation?
     
     @IBAction func togglePicker(sender: AnyObject) {
         picker.hidden ? openPicker() : closePicker()
@@ -40,6 +43,7 @@ class EntryFormController: UIViewController {
         picker.alpha = 0
         picker.hidden = true
         picker.userInteractionEnabled = true
+        setupLocationManager()
         
         var offset = 21
         
@@ -53,7 +57,6 @@ class EntryFormController: UIViewController {
             picker.addSubview(button)
             offset += 44
         }
-        
         
         view.addSubview(picker)
     }
@@ -85,6 +88,16 @@ class EntryFormController: UIViewController {
                 }
             }
         )
+    }
+    
+    func setupLocationManager()
+    {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters
+        locationManager.startUpdatingLocation()
     }
 
     override func didReceiveMemoryWarning() {
