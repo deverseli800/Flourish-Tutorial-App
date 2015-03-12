@@ -14,6 +14,7 @@
 		1A25D3531AACF71F005E6C76 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A25D3521AACF71F005E6C76 /* Images.xcassets */; };
 		1A25D3561AACF71F005E6C76 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A25D3541AACF71F005E6C76 /* LaunchScreen.xib */; };
 		1A25D3621AACF71F005E6C76 /* Flourish_TeachingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25D3611AACF71F005E6C76 /* Flourish_TeachingTests.swift */; };
+		1A3E0C1C1AB1EDFC00E26BAD /* UIColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E0C1B1AB1EDFC00E26BAD /* UIColorHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		1A25D35B1AACF71F005E6C76 /* Flourish-TeachingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flourish-TeachingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A25D3601AACF71F005E6C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A25D3611AACF71F005E6C76 /* Flourish_TeachingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flourish_TeachingTests.swift; sourceTree = "<group>"; };
+		1A3E0C1B1AB1EDFC00E26BAD /* UIColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				1A25D3491AACF71F005E6C76 /* AppDelegate.swift */,
 				1A25D34B1AACF71F005E6C76 /* EntryFormController.swift */,
+				1A3E0C1A1AB1EDDE00E26BAD /* Helpers */,
 				1A25D34D1AACF71F005E6C76 /* SecondViewController.swift */,
 				1A25D34F1AACF71F005E6C76 /* Main.storyboard */,
 				1A25D3521AACF71F005E6C76 /* Images.xcassets */,
@@ -113,6 +116,14 @@
 				1A25D3601AACF71F005E6C76 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1A3E0C1A1AB1EDDE00E26BAD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1A3E0C1B1AB1EDFC00E26BAD /* UIColorHelper.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +229,7 @@
 				1A25D34E1AACF71F005E6C76 /* SecondViewController.swift in Sources */,
 				1A25D34A1AACF71F005E6C76 /* AppDelegate.swift in Sources */,
 				1A25D34C1AACF71F005E6C76 /* EntryFormController.swift in Sources */,
+				1A3E0C1C1AB1EDFC00E26BAD /* UIColorHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

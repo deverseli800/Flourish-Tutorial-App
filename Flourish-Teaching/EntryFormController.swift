@@ -23,13 +23,44 @@ class EntryFormController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        picker.frame = CGRect(x:45, y:160, width:286, height: 291)
+        picker.alpha = 0
+        picker.hidden = true
+        picker.userInteractionEnabled = true
+        
+        var offset = 21
+        
+        for (index, feeling) in enumerate(feelings) {
+            let button = UIButton()
+            button.frame = CGRect(x:13, y:offset, width: 260, height:43)
+            button.setTitle(feeling["title"]!, forState: .Normal)
+            button.setTitleColor(UIColor(rgba: feeling["color"]!), forState: .Normal)
+            picker.addSubview(button)
+            offset += 44
+        }
+        
+        
+        view.addSubview(picker)
+    }
+    
+    func openPicker() {
+        self.picker.hidden = false
+        
+        UIView.animateWithDuration(
+            0.3,
+            animations: {
+                self.picker.frame = CGRect(x: 45, y: 180, width: 286, height: 291)
+                self.picker.alpha = 1
+            },
+            completion: {finished in
+                
+            }
+        )
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
