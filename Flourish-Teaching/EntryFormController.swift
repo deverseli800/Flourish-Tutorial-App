@@ -23,6 +23,15 @@ class EntryFormController: UIViewController {
     @IBAction func togglePicker(sender: AnyObject) {
         picker.hidden ? openPicker() : closePicker()
     }
+    @IBAction func setMood(sender: AnyObject) {
+        feelingButton.tag = sender.tag
+        feelingButton.setTitle(sender.currentTitle, forState: .Normal)
+        feelingButton.setTitleColor(sender.titleColorForState(.Normal), forState: .Normal)
+        
+        closePicker()
+    }
+    
+    @IBOutlet weak var feelingButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +46,10 @@ class EntryFormController: UIViewController {
         for (index, feeling) in enumerate(feelings) {
             let button = UIButton()
             button.frame = CGRect(x:13, y:offset, width: 260, height:43)
+            button.tag = index
             button.setTitle(feeling["title"]!, forState: .Normal)
             button.setTitleColor(UIColor(rgba: feeling["color"]!), forState: .Normal)
+            button.addTarget(self, action: "setMood:", forControlEvents: .TouchUpInside)
             picker.addSubview(button)
             offset += 44
         }

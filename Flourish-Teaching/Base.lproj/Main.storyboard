@@ -96,7 +96,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bk6-8u-eS9">
-                                <rect key="frame" x="146" y="129" width="41" height="40"/>
+                                <rect key="frame" x="156" y="129" width="41" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="JxY-Nv-8mW"/>
                                 </constraints>
@@ -120,7 +120,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="zNS-5W-gfW"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Save Journal Entry">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.32549019610000002" green="0.74901960779999999" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -145,13 +145,16 @@
                             <constraint firstItem="iwj-Mt-ojx" firstAttribute="top" secondItem="hIR-ec-ZL6" secondAttribute="bottom" constant="1" id="jHD-R8-ksZ"/>
                             <constraint firstItem="iwj-Mt-ojx" firstAttribute="leading" secondItem="bCd-nk-cnC" secondAttribute="leadingMargin" constant="10" id="kXZ-5q-9h0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hIR-ec-ZL6" secondAttribute="trailing" id="lYu-JR-rt9"/>
-                            <constraint firstItem="bk6-8u-eS9" firstAttribute="leading" secondItem="bCd-nk-cnC" secondAttribute="leadingMargin" constant="130" id="t7O-Cr-eTC"/>
+                            <constraint firstItem="bk6-8u-eS9" firstAttribute="leading" secondItem="bCd-nk-cnC" secondAttribute="leadingMargin" constant="140" id="t7O-Cr-eTC"/>
                             <constraint firstItem="mq4-2N-Q44" firstAttribute="leading" secondItem="bCd-nk-cnC" secondAttribute="leadingMargin" id="x3X-Ac-5PT"/>
                             <constraint firstItem="FmZ-Tp-ipa" firstAttribute="top" secondItem="gmG-RZ-bzi" secondAttribute="bottom" constant="15" id="y5O-CY-khx"/>
                             <constraint firstItem="ZyD-A2-ZJU" firstAttribute="top" secondItem="TjP-al-2zt" secondAttribute="bottom" constant="26" id="zBo-JZ-lCb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Slb-uq-PCb"/>
+                    <connections>
+                        <outlet property="feelingButton" destination="bk6-8u-eS9" id="UL6-um-8lB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNb-se-ESy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
