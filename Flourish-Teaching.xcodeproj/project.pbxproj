@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A25D34A1AACF71F005E6C76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25D3491AACF71F005E6C76 /* AppDelegate.swift */; };
-		1A25D34C1AACF71F005E6C76 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25D34B1AACF71F005E6C76 /* FirstViewController.swift */; };
+		1A25D34C1AACF71F005E6C76 /* EntryFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25D34B1AACF71F005E6C76 /* EntryFormController.swift */; };
 		1A25D34E1AACF71F005E6C76 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A25D34D1AACF71F005E6C76 /* SecondViewController.swift */; };
 		1A25D3511AACF71F005E6C76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A25D34F1AACF71F005E6C76 /* Main.storyboard */; };
 		1A25D3531AACF71F005E6C76 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A25D3521AACF71F005E6C76 /* Images.xcassets */; };
@@ -30,7 +30,7 @@
 		1A25D3441AACF71F005E6C76 /* Flourish-Teaching.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flourish-Teaching.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A25D3481AACF71F005E6C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A25D3491AACF71F005E6C76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A25D34B1AACF71F005E6C76 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		1A25D34B1AACF71F005E6C76 /* EntryFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryFormController.swift; sourceTree = "<group>"; };
 		1A25D34D1AACF71F005E6C76 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		1A25D3501AACF71F005E6C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A25D3521AACF71F005E6C76 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				1A25D3491AACF71F005E6C76 /* AppDelegate.swift */,
-				1A25D34B1AACF71F005E6C76 /* FirstViewController.swift */,
+				1A25D34B1AACF71F005E6C76 /* EntryFormController.swift */,
 				1A25D34D1AACF71F005E6C76 /* SecondViewController.swift */,
 				1A25D34F1AACF71F005E6C76 /* Main.storyboard */,
 				1A25D3521AACF71F005E6C76 /* Images.xcassets */,
@@ -217,7 +217,7 @@
 			files = (
 				1A25D34E1AACF71F005E6C76 /* SecondViewController.swift in Sources */,
 				1A25D34A1AACF71F005E6C76 /* AppDelegate.swift in Sources */,
-				1A25D34C1AACF71F005E6C76 /* FirstViewController.swift in Sources */,
+				1A25D34C1AACF71F005E6C76 /* EntryFormController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +413,7 @@
 				1A25D3671AACF71F005E6C76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A25D3681AACF71F005E6C76 /* Build configuration list for PBXNativeTarget "Flourish-TeachingTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +422,7 @@
 				1A25D36A1AACF71F005E6C76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
