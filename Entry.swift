@@ -87,11 +87,64 @@ class Entry: NSObject {
         })
     }
     
-    func load (predicate: NSPredicate? = nil, sort: NSSortDescriptor? = nil) {
+    func load(predicate: NSPredicate? = nil, sort: NSSortDescriptor? = nil) {
         let predicate = predicate ?? NSPredicate(value:true)
         let sort = sort ?? NSSortDescriptor(key: "creationDate", ascending: false)
         let query = CKQuery(recordType: "Entry", predicate: predicate)
         query.sortDescriptors = [sort]
+        
+        model.privateDB.performQuery(query, inZoneWithID: nil, completionHandler: {
+            results, error in
+            if error != nil
+            {
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.model.delegate?.errorUpdating(error)
+                    println("error loading: \(error)")
+                    return
+                }
+            }
+            else {
+                self.records.removeAll(keepCapacity: true)
+                
+                for record in results {
+                    let entry = Entry(record: record as? CKRecord)
+                    self.records.append(entry)
+                }
+                
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.model.delegate?.modelUpdated()
+                    println("successfully loaded entries")
+                    return
+                }
+            }
+            
+        })
+    }
+    
+    func update(title: String? = nil, body: String? = nil, mood: Int? = nil, completion:(success: Bool, message: String, error: NSError?)->())
+    {
+        self.title = title ?? self.title
+        self.body = body ?? self.body
+        self.mood = mood ?? self.mood
+        
+        create() { success, message, error in
+            completion(success: success, message: message, error: error)
+        }
+    }
+    
+    func destroy(completion: (success: Bool, message: String, error: NSError?) -> ())
+    {
+        model.privateDB.deleteRecordWithID(record.recordID, completionHandler: {
+            record, error in
+            if error != nil {
+                println("ERR RECORD ID: \(self.record.recordID)")
+                completion(success: false, message: "could not delete entry", error: nil)
+            }
+            else {
+                println("DEL RECORD ID: \(self.record.recordID)")
+                completion(success: true, message: "successfully deleted entry", error: nil)
+            }
+        })
     }
     
 }

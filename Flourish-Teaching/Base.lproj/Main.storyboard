@@ -102,6 +102,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Select">
+                                    <color key="titleColor" red="0.21176470588235294" green="0.52941176470588236" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -124,6 +125,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.32549019610000002" green="0.74901960779999999" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveForm:" destination="hgH-Ad-uvr" eventType="touchUpInside" id="Wj7-aW-K2o"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.08235294118" green="0.27058823529999998" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -153,7 +157,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Slb-uq-PCb"/>
                     <connections>
+                        <outlet property="bodyInput" destination="mq4-2N-Q44" id="eMe-V9-tvm"/>
                         <outlet property="feelingButton" destination="bk6-8u-eS9" id="UL6-um-8lB"/>
+                        <outlet property="titleInput" destination="hIR-ec-ZL6" id="44h-RK-9By"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNb-se-ESy" userLabel="First Responder" sceneMemberID="firstResponder"/>

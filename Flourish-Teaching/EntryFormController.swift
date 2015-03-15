@@ -34,6 +34,27 @@ class EntryFormController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBOutlet weak var feelingButton: UIButton!
+    @IBOutlet weak var titleInput: UITextField!
+    @IBOutlet weak var bodyInput: UITextView!
+    
+    @IBAction func saveForm(sender: AnyObject) {
+        let entry = Entry(title:titleInput.text, body:bodyInput.text, mood: feelingButton.tag, location: currentLocation)
+        
+        entry.create() {
+            success, message, error in
+            //Reset and clear the form if saved
+            if success {
+                println("success!", message)
+                self.titleInput = nil
+                self.feelingButton.setTitle("select", forState: .Normal)
+                self.feelingButton.setTitleColor(UIColor(rgba:"#3687FF"), forState: .Normal)
+                self.bodyInput.text = nil
+            }
+            else {
+                println(error)
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
