@@ -17,6 +17,11 @@
 		1A3E0C1C1AB1EDFC00E26BAD /* UIColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E0C1B1AB1EDFC00E26BAD /* UIColorHelper.swift */; };
 		1A3E0C1F1AB2352500E26BAD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3E0C1E1AB2352500E26BAD /* CloudKit.framework */; };
 		1A3E0C221AB23F1800E26BAD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E0C211AB23F1800E26BAD /* Model.swift */; };
+		1A3E0C281AB2489400E26BAD /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E0C271AB2489400E26BAD /* Entry.swift */; };
+		1AB4A0281AB5261F001F306A /* Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB4A0231AB5261F001F306A /* Crypto.m */; };
+		1AB4A0291AB5261F001F306A /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB4A0241AB5261F001F306A /* Keychain.swift */; };
+		1AB4A02A1AB5261F001F306A /* RNCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB4A0261AB5261F001F306A /* RNCryptor.m */; };
+		1AB4A02D1AB52857001F306A /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB4A02C1AB52857001F306A /* AuthHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,15 @@
 		1A3E0C1D1AB2351000E26BAD /* Flourish-Teaching.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Flourish-Teaching.entitlements"; sourceTree = "<group>"; };
 		1A3E0C1E1AB2352500E26BAD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		1A3E0C211AB23F1800E26BAD /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		1A3E0C271AB2489400E26BAD /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		1AB4A0221AB5261F001F306A /* Crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crypto.h; sourceTree = "<group>"; };
+		1AB4A0231AB5261F001F306A /* Crypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Crypto.m; sourceTree = "<group>"; };
+		1AB4A0241AB5261F001F306A /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		1AB4A0251AB5261F001F306A /* RNCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCryptor.h; sourceTree = "<group>"; };
+		1AB4A0261AB5261F001F306A /* RNCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCryptor.m; sourceTree = "<group>"; };
+		1AB4A0271AB5261F001F306A /* RNCryptor+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNCryptor+Private.h"; sourceTree = "<group>"; };
+		1AB4A02B1AB5264F001F306A /* Flourish-Teaching-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Flourish-Teaching-Bridging-Header.h"; sourceTree = "<group>"; };
+		1AB4A02C1AB52857001F306A /* AuthHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthHelper.swift; path = ../AuthHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +83,7 @@
 		1A25D33B1AACF71F005E6C76 = {
 			isa = PBXGroup;
 			children = (
-				1A3E0C201AB23F0800E26BAD /* Models */,
+				1AB4A02B1AB5264F001F306A /* Flourish-Teaching-Bridging-Header.h */,
 				1A3E0C1E1AB2352500E26BAD /* CloudKit.framework */,
 				1A25D3461AACF71F005E6C76 /* Flourish-Teaching */,
 				1A25D35E1AACF71F005E6C76 /* Flourish-TeachingTests */,
@@ -89,6 +103,8 @@
 		1A25D3461AACF71F005E6C76 /* Flourish-Teaching */ = {
 			isa = PBXGroup;
 			children = (
+				1AB4A0211AB5260E001F306A /* Library */,
+				1A3E0C201AB23F0800E26BAD /* Models */,
 				1A3E0C1D1AB2351000E26BAD /* Flourish-Teaching.entitlements */,
 				1A25D3491AACF71F005E6C76 /* AppDelegate.swift */,
 				1A25D34B1AACF71F005E6C76 /* EntryFormController.swift */,
@@ -130,6 +146,7 @@
 		1A3E0C1A1AB1EDDE00E26BAD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				1AB4A02C1AB52857001F306A /* AuthHelper.swift */,
 				1A3E0C1B1AB1EDFC00E26BAD /* UIColorHelper.swift */,
 			);
 			name = Helpers;
@@ -138,9 +155,24 @@
 		1A3E0C201AB23F0800E26BAD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1A3E0C271AB2489400E26BAD /* Entry.swift */,
 				1A3E0C211AB23F1800E26BAD /* Model.swift */,
 			);
 			name = Models;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		1AB4A0211AB5260E001F306A /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				1AB4A0221AB5261F001F306A /* Crypto.h */,
+				1AB4A0231AB5261F001F306A /* Crypto.m */,
+				1AB4A0241AB5261F001F306A /* Keychain.swift */,
+				1AB4A0251AB5261F001F306A /* RNCryptor.h */,
+				1AB4A0261AB5261F001F306A /* RNCryptor.m */,
+				1AB4A0271AB5261F001F306A /* RNCryptor+Private.h */,
+			);
+			name = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,9 +281,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AB4A0281AB5261F001F306A /* Crypto.m in Sources */,
+				1A3E0C281AB2489400E26BAD /* Entry.swift in Sources */,
 				1A3E0C221AB23F1800E26BAD /* Model.swift in Sources */,
 				1A25D34E1AACF71F005E6C76 /* SecondViewController.swift in Sources */,
 				1A25D34A1AACF71F005E6C76 /* AppDelegate.swift in Sources */,
+				1AB4A02A1AB5261F001F306A /* RNCryptor.m in Sources */,
+				1AB4A0291AB5261F001F306A /* Keychain.swift in Sources */,
+				1AB4A02D1AB52857001F306A /* AuthHelper.swift in Sources */,
 				1A25D34C1AACF71F005E6C76 /* EntryFormController.swift in Sources */,
 				1A3E0C1C1AB1EDFC00E26BAD /* UIColorHelper.swift in Sources */,
 			);
@@ -379,7 +416,9 @@
 		1A25D3661AACF71F005E6C76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Flourish-Teaching/Flourish-Teaching.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -387,13 +426,17 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Flourish-Teaching-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		1A25D3671AACF71F005E6C76 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Flourish-Teaching/Flourish-Teaching.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -401,6 +444,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Flourish-Teaching-Bridging-Header.h";
 			};
 			name = Release;
 		};

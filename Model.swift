@@ -17,6 +17,11 @@ protocol ModelDelegate
 
 @objc class Model
 {
+    class func singleton() -> Model
+    {
+            return globalModelSingleton
+    }
+    
     var delegate: ModelDelegate?
     let container: CKContainer
     let publicDB: CKDatabase
@@ -29,3 +34,5 @@ protocol ModelDelegate
         privateDB = container.privateCloudDatabase
     }
 }
+
+let globalModelSingleton = Model()

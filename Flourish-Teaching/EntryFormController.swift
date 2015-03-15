@@ -10,7 +10,6 @@ import UIKit
 import CoreLocation
 
 class EntryFormController: UIViewController, CLLocationManagerDelegate {
-    
     let picker = UIImageView(image:UIImage(named: "picker"))
     let feelings = [
         ["title": "the best", "color" : "#8647b7"],
