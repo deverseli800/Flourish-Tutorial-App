@@ -22,8 +22,13 @@ final public class AuthHelper: NSObject {
         return (string: encryptedString, data: encryptedData)
     }
     
-    public class func decrypt(input: String!, passowrd: String? = nil) -> (string: String?, data: NSData?) {
-    
+    public class func decrypt(input: String!, password: String? = nil) -> (string: String?, data: NSData?) {
+        let pass = (password != nil) ? password : self.key
+        let encryptedData = NSData(base64EncodedString: input, options: NSDataBase64DecodingOptions(rawValue:0))
+        let decryptedData = Crypto.decryptData(encryptedData, password: pass, error: nil)
+        let decryptedText = NSString(data: decryptedData, encoding: NSUTF8StringEncoding) as? String
+        
+        return (string: decryptedText, data: decryptedData)
     }
 }
     
