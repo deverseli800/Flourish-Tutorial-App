@@ -81,6 +81,10 @@ class EntryFormController: UIViewController, CLLocationManagerDelegate {
         view.addSubview(picker)
     }
     
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        view.endEditing(true)
+    }
+    
     func openPicker() {
         self.picker.hidden = false
         
