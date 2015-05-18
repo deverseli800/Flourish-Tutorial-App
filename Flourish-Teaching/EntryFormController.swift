@@ -19,6 +19,7 @@ class EntryFormController: UIViewController, CLLocationManagerDelegate {
         ["title": "not so great", "color" : "#c6802e"],
         ["title": "the worst", "color" : "#b05050"]
     ]
+
     var locationManager : CLLocationManager!
     var currentLocation : CLLocation?
     
@@ -36,25 +37,36 @@ class EntryFormController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var feelingButton: UIButton!
     @IBOutlet weak var titleInput: UITextField!
     @IBOutlet weak var bodyInput: UITextView!
+    @IBOutlet weak var submitButton: UIButton!
     
     @IBAction func saveForm(sender: AnyObject) {
         let entry = Entry(title:titleInput.text, body:bodyInput.text, mood: feelingButton.tag, location: currentLocation)
         
         entry.create() {
             success, message, error in
-            //Reset and clear the form if saved
             if success {
                 println("success!", message)
                 self.titleInput = nil
                 self.feelingButton.setTitle("select", forState: .Normal)
                 self.feelingButton.setTitleColor(UIColor(rgba:"#3687FF"), forState: .Normal)
                 self.bodyInput.text = nil
+                let statusAlert = UIAlertController(title:"Entry Saved", message: "Your entry has been saved!", preferredStyle: .Alert)
+                statusAlert.addAction(UIAlertAction(title:"OK", style: .Default, handler: nil))
+                self.presentViewController(statusAlert, animated: true, completion: nil);
             }
             else {
-                println(error)
+                let statusAlert = UIAlertController(title:"Error", message: error!.localizedDescription, preferredStyle: .Alert)
+                statusAlert.addAction(UIAlertAction(title:"OK", style: .Default, handler: nil))
+                statusAlert.addAction(UIAlertAction(title:"Retry", style: .Default, handler: self.retrySaving))
+                self.presentViewController(statusAlert, animated: true, completion: nil)
             }
         }
     }
+    
+    func retrySaving(alert: UIAlertAction!) {
+        submitButton.sendActionsForControlEvents(UIControlEvents.TouchUpInside)
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

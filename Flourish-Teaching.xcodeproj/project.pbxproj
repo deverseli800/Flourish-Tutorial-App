@@ -18,10 +18,12 @@
 		1A3E0C1F1AB2352500E26BAD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3E0C1E1AB2352500E26BAD /* CloudKit.framework */; };
 		1A3E0C221AB23F1800E26BAD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E0C211AB23F1800E26BAD /* Model.swift */; };
 		1A3E0C281AB2489400E26BAD /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E0C271AB2489400E26BAD /* Entry.swift */; };
+		1AADAFF31AF91F9300F22433 /* JournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AADAFF21AF91F9300F22433 /* JournalController.swift */; };
 		1AB4A0281AB5261F001F306A /* Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB4A0231AB5261F001F306A /* Crypto.m */; };
 		1AB4A0291AB5261F001F306A /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB4A0241AB5261F001F306A /* Keychain.swift */; };
 		1AB4A02A1AB5261F001F306A /* RNCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB4A0261AB5261F001F306A /* RNCryptor.m */; };
 		1AB4A02D1AB52857001F306A /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB4A02C1AB52857001F306A /* AuthHelper.swift */; };
+		1ACF09F21B00FB0900D6A723 /* JournalEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACF09F11B00FB0900D6A723 /* JournalEntryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,7 @@
 		1A3E0C1E1AB2352500E26BAD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		1A3E0C211AB23F1800E26BAD /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1A3E0C271AB2489400E26BAD /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		1AADAFF21AF91F9300F22433 /* JournalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalController.swift; sourceTree = "<group>"; };
 		1AB4A0221AB5261F001F306A /* Crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crypto.h; sourceTree = "<group>"; };
 		1AB4A0231AB5261F001F306A /* Crypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Crypto.m; sourceTree = "<group>"; };
 		1AB4A0241AB5261F001F306A /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
@@ -59,6 +62,7 @@
 		1AB4A0271AB5261F001F306A /* RNCryptor+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNCryptor+Private.h"; sourceTree = "<group>"; };
 		1AB4A02B1AB5264F001F306A /* Flourish-Teaching-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Flourish-Teaching-Bridging-Header.h"; sourceTree = "<group>"; };
 		1AB4A02C1AB52857001F306A /* AuthHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthHelper.swift; path = ../AuthHelper.swift; sourceTree = "<group>"; };
+		1ACF09F11B00FB0900D6A723 /* JournalEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalEntryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 				1A3E0C1D1AB2351000E26BAD /* Flourish-Teaching.entitlements */,
 				1A25D3491AACF71F005E6C76 /* AppDelegate.swift */,
 				1A25D34B1AACF71F005E6C76 /* EntryFormController.swift */,
+				1AADAFF21AF91F9300F22433 /* JournalController.swift */,
+				1ACF09F11B00FB0900D6A723 /* JournalEntryCell.swift */,
 				1A3E0C1A1AB1EDDE00E26BAD /* Helpers */,
 				1A25D34D1AACF71F005E6C76 /* SecondViewController.swift */,
 				1A25D34F1AACF71F005E6C76 /* Main.storyboard */,
@@ -219,7 +225,7 @@
 		1A25D33C1AACF71F005E6C76 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Cesar Devers";
 				TargetAttributes = {
 					1A25D3431AACF71F005E6C76 = {
@@ -284,8 +290,10 @@
 				1AB4A0281AB5261F001F306A /* Crypto.m in Sources */,
 				1A3E0C281AB2489400E26BAD /* Entry.swift in Sources */,
 				1A3E0C221AB23F1800E26BAD /* Model.swift in Sources */,
+				1AADAFF31AF91F9300F22433 /* JournalController.swift in Sources */,
 				1A25D34E1AACF71F005E6C76 /* SecondViewController.swift in Sources */,
 				1A25D34A1AACF71F005E6C76 /* AppDelegate.swift in Sources */,
+				1ACF09F21B00FB0900D6A723 /* JournalEntryCell.swift in Sources */,
 				1AB4A02A1AB5261F001F306A /* RNCryptor.m in Sources */,
 				1AB4A0291AB5261F001F306A /* Keychain.swift in Sources */,
 				1AB4A02D1AB52857001F306A /* AuthHelper.swift in Sources */,
@@ -368,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -406,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -416,7 +424,6 @@
 		1A25D3661AACF71F005E6C76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Flourish-Teaching/Flourish-Teaching.entitlements";
@@ -434,7 +441,6 @@
 		1A25D3671AACF71F005E6C76 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Flourish-Teaching/Flourish-Teaching.entitlements";
