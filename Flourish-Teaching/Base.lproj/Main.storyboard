@@ -188,33 +188,31 @@
         <scene sceneID="jfv-U3-tHa">
             <objects>
                 <tableViewController id="sMS-pf-WEb" customClass="JournalController" customModule="Flourish_Teaching" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="azB-to-Yhh">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="azB-to-Yhh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="entryCell" rowHeight="400" id="iCC-xM-eWB" customClass="JournalEntryCell" customModule="Flourish_Teaching" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="entryCell" rowHeight="100" id="iCC-xM-eWB" customClass="JournalEntryCell" customModule="Flourish_Teaching" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iCC-xM-eWB" id="pyO-SN-2oP">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiN-u8-DsU">
-                                            <rect key="frame" x="28" y="180" width="544" height="21"/>
+                                            <rect key="frame" x="28" y="54" width="544" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5y9-g3-zle">
-                                            <rect key="frame" x="28" y="18" width="544" height="100"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="100" id="VGm-BQ-oD0"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5y9-g3-zle">
+                                            <rect key="frame" x="28" y="18" width="544" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="MiN-u8-DsU" firstAttribute="top" secondItem="5y9-g3-zle" secondAttribute="bottom" constant="15" id="6bm-Up-4bz"/>
                                         <constraint firstItem="5y9-g3-zle" firstAttribute="top" secondItem="pyO-SN-2oP" secondAttribute="topMargin" constant="10" id="BYD-nH-Yl2"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="MiN-u8-DsU" secondAttribute="trailing" constant="20" id="H2l-gE-wkS"/>
                                         <constraint firstItem="5y9-g3-zle" firstAttribute="leading" secondItem="pyO-SN-2oP" secondAttribute="leadingMargin" constant="20" id="SAc-P0-MNF"/>

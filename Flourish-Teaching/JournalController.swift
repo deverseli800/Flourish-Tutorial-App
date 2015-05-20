@@ -26,7 +26,7 @@ class JournalController: UITableViewController, ModelDelegate
         entries.model.delegate = self
         entries.load()
         
-        tableView.estimatedRowHeight = 220.0
+        tableView.estimatedRowHeight = 40.0
         tableView.rowHeight = UITableViewAutomaticDimension
     }
     
