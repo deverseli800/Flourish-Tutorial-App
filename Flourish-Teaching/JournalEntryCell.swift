@@ -61,7 +61,17 @@ class JournalEntryCell: UITableViewCell
             // add layer
             contentView.layer.addSublayer(borderBottom)
             
-           
+            // Draw left border
+            let path = UIBezierPath()
+            path.moveToPoint(CGPoint(x: 0, y: 0))
+            path.addLineToPoint(CGPoint(x: 0, y: contentView.bounds.height))
+            
+            let shapeLayer = CAShapeLayer()
+            shapeLayer.path = path.CGPath
+            shapeLayer.lineWidth = 8.0
+            shapeLayer.strokeColor = UIColor(rgba: "#999999").CGColor
+            shapeLayer.zPosition = 3
+            contentView.layer.addSublayer(shapeLayer)
         }
     }
 
